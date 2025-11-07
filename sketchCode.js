@@ -29,7 +29,8 @@ function gridEvent() {
     const grids = document.querySelectorAll(".grid");
     grids.forEach((grid) => {
     grid.addEventListener("mouseover", (event) => {
-        event.target.style.backgroundColor = "purple";
+        const randomColor = Math.floor(Math.random()*16777215).toString(16);
+        event.target.style.backgroundColor = "#" + randomColor;
 
     })
 })
